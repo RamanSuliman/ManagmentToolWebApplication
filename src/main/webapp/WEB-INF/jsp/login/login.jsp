@@ -11,8 +11,8 @@
         <p style="color: red">${message}</p>
     </c:if>
     <form method="post" action="login">
-        <label>Username:</label>
-        <input type="text" name="username" required/><br>
+        <label>Email:</label>
+        <input type="text" name="email" required/><br>
         <label>Password:</label>
         <input type="password" name="password" required/><br>
         <input type="submit" value="Login"/>

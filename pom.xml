@@ -25,33 +25,65 @@
   	<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-context</artifactId>
-	    <version>5.3.9</version>
+	    <version>5.3.15</version>
+    </dependency>
+	
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>5.3.15</version>
     </dependency>
 	
 	<!--  provides support for building web applications with Spring, including support for HTTP requests and responses, and integration with the Spring IoC container.  -->
   	<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-web</artifactId>
-	    <version>5.3.9</version>
+	    <version>5.3.15</version>
     </dependency>
 
 	<!--  provides support for building web applications with Spring MVC, including support for handling HTTP requests, rendering views, and managing application flow. -->
 	<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-webmvc</artifactId>
-	    <version>5.3.9</version>
+	    <version>5.3.15</version>
     </dependency>
 	  	  
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-jpa</artifactId>
+	    <version>2.6.0</version>
+    </dependency>
+    
+    <dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>5.6.3.Final</version>
+    </dependency>
+    
+    <dependency>
+	    <groupId>javax.persistence</groupId>
+	    <artifactId>javax.persistence-api</artifactId>
+	    <version>2.2</version>
+    </dependency>
+    
 	<dependency>
 	  	<groupId>javax.servlet</groupId>
 	  	<artifactId>jstl</artifactId>
 	  	<version>1.2</version>
 	</dependency>  
 	
+	<!-- MySQL Driver -->
 	<dependency>
-	    <groupId>org.springframework.data</groupId>
-	    <artifactId>spring-data-jpa</artifactId>
-	    <version>3.0.1</version>
+	  	<groupId>mysql</groupId>
+	  	<artifactId>mysql-connector-java</artifactId>
+	  	<version>8.0.31</version>
+	</dependency>
+
+	<!-- Logging -->
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-core</artifactId>
+	    <version>2.14.1</version>
 	</dependency>
 
   </dependencies>

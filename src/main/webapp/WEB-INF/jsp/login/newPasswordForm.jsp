@@ -10,8 +10,6 @@
     <form method="post" action="setNewUserPassword">
         <c:if test="${not empty user}">
             <input type="hidden" name="id" value="${user.id}"/>
-            <label>Username:</label>
-            <input type="text" name="username" value="${user.username}" readonly/><br>
             <label>Email:</label>
             <input type="email" name="email" value="${user.email}" readonly/><br>
             <label>New Password:</label>

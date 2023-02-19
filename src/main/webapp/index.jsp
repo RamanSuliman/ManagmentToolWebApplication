@@ -11,5 +11,6 @@
 	<p>Please choose one of the following options:</p>
     <a href="login" class="btn btn-primary">Login</a>
     <a href="register" class="btn btn-secondary">Register</a>
+    <a href="logout" class="btn btn-secondary">Logout</a>
 </body>
 </html>
