@@ -78,4 +78,38 @@ public class UserController
 		}else
 			return "redirect:/login";
 	}
+	
+	@GetMapping("/reset-password")
+	public String getPasswordResetForm()
+	{
+		return "login/resetPasswordForm";
+	}
+	
+	@PostMapping("/reset-password")
+	public String getPasswordResetForm(@RequestParam String email, Model model)
+	{
+		User user = userService.findByEmail(email);
+		if(user != null)
+		{
+			model.addAttribute("user", user);
+			return "redirect:/newPaswordForm";
+		}else {
+			model.addAttribute("message", "User not found");
+			return "redirect:/reset-password";
+		}
+	}
+	
+	@GetMapping("/newPaswordForm")
+	public String getNewPasswordForm()
+	{
+		return "login/newPasswordForm";
+	}	
+	
+	@PostMapping("/setNewUserPassword")
+	public String saveNewPassword(@ModelAttribute("user") User user, @RequestParam String newPassword)
+	{
+		userService.resetPassword(user, newPassword);
+		//Call the getmapping loggin.
+		return "redirect:/login";
+	}
 }
