@@ -39,6 +39,24 @@ public class UserController
 	    return "redirect:/login"; // Redirect to the login page after logout
 	}
 	
+	@GetMapping("/register")
+	public String showRegistrationForm(Model model)
+	{
+		if(userService.isUserLogged())
+			return "redirect:/";
+		model.addAttribute("user", new User());
+		return "login/register";
+	}
+	
+	@PostMapping("/register")
+	public String register(@ModelAttribute("user") User user, HttpSession session)
+	{
+		if(userService.isUserLogged())
+			return "redirect:/";
+		userService.register(user);
+		return "redirect:/login";
+	}
+	
 	@GetMapping("/login")
 	public String showLoginForm()
 	{
